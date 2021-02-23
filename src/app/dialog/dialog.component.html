@@ -1,0 +1,80 @@
+<div class="bg-color">
+    <h2 mat-subheader>{{data.type}} User</h2>
+</div>
+<ul>
+    <li>
+      <form class="basic-form" [formGroup]="userFormGroup">
+        <div>
+            <mat-form-field class="add-form-field">
+                <input matInput type="text" formControlName="userId">
+                <mat-placeholder>
+                    Enter User Id
+                </mat-placeholder>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear"  (click)="clearInput('userId')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <small *ngIf="userFormGroup.controls['userId'].hasError('required') && userFormGroup.controls['userId'].touched" class="text-danger support-text">userId is required</small>
+
+        </div>
+        <div>
+            <mat-form-field class="add-form-field">
+                <input matInput type="text" formControlName="id">
+                <mat-placeholder>
+                    Enter Id
+                </mat-placeholder>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput('id')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <small *ngIf="userFormGroup.controls['id'].hasError('required') && userFormGroup.controls['id'].touched" class="text-danger support-text">id is required</small>
+
+        </div>
+        <div>
+            <mat-form-field class="add-form-field">
+                <input matInput type="text" formControlName="title">
+                <mat-placeholder>
+                    Enter Title
+                </mat-placeholder>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput('title')">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <small *ngIf="userFormGroup.controls['title'].hasError('required') && userFormGroup.controls['title'].touched" class="text-danger support-text">Title is required</small>
+        </div>
+        <div>
+          <mat-form-field class="add-form-field">
+              <input matInput type="text" formControlName="status">
+              <mat-placeholder>
+                  Enter Status
+              </mat-placeholder>
+              <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clearInput('status')">
+                  <mat-icon>close</mat-icon>
+              </button>
+          </mat-form-field>
+          <small *ngIf="userFormGroup.controls['status'].hasError('required') && userFormGroup.controls['status'].touched" class="text-danger support-text">status is required</small>
+
+      </div>
+      <div>
+        <button mat-raised-button matTooltip="Cancel this page" class="btn-edit-page" color="warn" (click)="closeModalDialog('')"><mat-icon>clear</mat-icon></button>
+        <button mat-raised-button matTooltip="Save user" class="btn-edit-page save-margin" color="primary" (click)="saveUserDetails()"> <mat-icon>save</mat-icon></button>
+    </div>
+    </form>
+    </li>
+  </ul>
+  <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="text-center"><img alt="homepage" ><h4 class="m-t-0">Recover Password</h4></div>  
+    <p class="text-center font-14">Enter your email and we'll send you the password reset link.</p>
+    
+    <div  fxLayout="column"  fxLayoutAlign="space-around">
+      <div class="pb-1">
+        <mat-form-field style="width: 100%">
+          <input matInput placeholder="Email address" type="email" [formControl]="form.controls['email']">
+        </mat-form-field>
+        <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="text-danger support-text">You must include an email address.</small>
+      </div>
+      <button mat-raised-button color="primary" type="submit"  class="btn-block btn-lg m-t-20"  [disabled]="!form.valid">Submit</button>
+    </div>
+    
+  </form> -->
+ 

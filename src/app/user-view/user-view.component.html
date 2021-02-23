@@ -1,0 +1,13 @@
+
+<div class="bg-color">
+  <h2 mat-subheader>User View</h2>
+</div>
+<mat-divider></mat-divider>
+<mat-list class="list-style">
+  <mat-list-item><mat-lable class="space-between"><b>User Id :  </b></mat-lable>   {{viewData.pageValue.userId}} </mat-list-item>
+  <mat-list-item><mat-lable class="space-between"><b>Title: </b> </mat-lable>  {{viewData.pageValue.title}} </mat-list-item>
+  <mat-list-item><mat-lable class="space-between"><b>Id :  </b> </mat-lable>  {{viewData.pageValue.id}} </mat-list-item>
+  <mat-list-item><mat-lable class="space-between"><b>Status :  </b></mat-lable>   {{viewData.pageValue.completed}} </mat-list-item>
+</mat-list>
+<button mat-raised-button color="primary" (click)="closeModalDialog()">Ok</button>
+

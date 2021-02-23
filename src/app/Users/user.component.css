@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+  }
+  
+.cursor{
+  cursor: pointer;
+}
+
+.create-user{
+  position: absolute;
+  right: 52px;
+  top: 8px;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary{
+  background-color: #525058 !important;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
