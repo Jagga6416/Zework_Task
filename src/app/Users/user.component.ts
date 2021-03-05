@@ -14,7 +14,7 @@ import { UserViewComponent } from '../user-view/user-view.component'
   styleUrls: ['./user.component.css']
 })
 export class UsersComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'edit', 'visibility', 'delete'];
+  displayedColumns: string[] = ['id', 'userID', 'title', 'status', 'edit', 'visibility', 'delete'];
   dataSource: any;
   value = 'Clear me';
   tableData: any;
@@ -32,11 +32,9 @@ export class UsersComponent implements OnInit {
   }
 
   getUserData() {
-    var array: any;
     this._userService.getUserData().subscribe(data => {
-      array = data;
-      this.dataSource = new MatTableDataSource<any>(array);
       this.tableData = data;
+      this.dataSource = new MatTableDataSource<any>(this.tableData);
       this.getPagination();
     }, error => {
       console.log(error.message);
